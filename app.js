@@ -10,10 +10,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    console.log(100)
+    // console.log(100)
     let val = req.body;
-    let ans= sol(val["LPA"]);
-    res.send(ans);
+    // let ans= sol(val["LPA"]);
+    res.send("ans");
 });
 
 function sol(amt){
