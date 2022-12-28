@@ -6,7 +6,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.get('/', (req, res) => {
     console.log(100)
-    res.sendFile(path.join(__dirname, '/index.html'));    
+    // res.sendFile(path.join(__dirname, '/index.html'));    
 });
 
 app.post('/', (req, res) => {
