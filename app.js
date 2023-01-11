@@ -14,7 +14,7 @@ app.post('/', (req, res) => {
     let val = req.body;
     let ans= sol(val["LPA"]);
     console.log(ans);
-    // res.send(ans);
+    res.send(`The amount is ${ans}`);
 
 });
 
@@ -30,7 +30,7 @@ function sol(amt){
         console.log(ans);
     }
     if(amt>1500000){
-        ans+=(amt-1500000)(30/100);
+        ans+=(amt-1500000)*(30/100);
     }
     console.log("ans=")
     console.log(ans);
