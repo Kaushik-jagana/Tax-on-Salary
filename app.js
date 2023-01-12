@@ -4,6 +4,9 @@ const app = express();
 
 app.use(express.urlencoded({extended:true}));
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+
 app.get('/', (req, res) => {
     // console.log(100)
     res.sendFile(path.join(__dirname, '/index.html'));    
@@ -14,7 +17,8 @@ app.post('/', (req, res) => {
     let val = req.body;
     let ans= sol(val["LPA"]);
     console.log(ans);
-    res.send(`The amount is ${ans}`);
+    // res.send(`The amount is ${ans}`);
+    res.render('home',{amount:ans , total : val["LPA"]-ans});
 
 });
 
